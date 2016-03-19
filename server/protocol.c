@@ -329,6 +329,9 @@ int ttp_open_port(ttp_session_t *session)
       freeaddrinfo(result);
     }
 
+    // debug
+    printf("Sending to client to %s\n", &address);
+
     /* read in the port number from the client */
     status = full_read(session->client_fd, &port, 2);
     if (status < 0)
