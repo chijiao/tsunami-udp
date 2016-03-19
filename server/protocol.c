@@ -330,7 +330,7 @@ int ttp_open_port(ttp_session_t *session)
     }
 
     // debug
-    printf("Sending to client to %s\n", &address);
+    //printf("Sending to client to %s\n", &address);
 
     /* read in the port number from the client */
     status = full_read(session->client_fd, &port, 2);
