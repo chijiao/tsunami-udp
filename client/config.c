@@ -73,6 +73,7 @@
 const u_int32_t  DEFAULT_BLOCK_SIZE    = 1024;         /* default size of a single file block          */
 const int        DEFAULT_TABLE_SIZE    = 4096;         /* initial size of the retransmission table     */
 const char      *DEFAULT_SERVER_NAME   = "localhost";  /* default name of the remote server            */
+ const char      *DEFAULT_CLIENT_IP   = "192.168.1.1";  /* default name of the remote server            */
 const u_int16_t  DEFAULT_SERVER_PORT   = TS_TCP_PORT;  /* default TCP port of the remote server        */
 const u_int16_t  DEFAULT_CLIENT_PORT   = TS_UDP_PORT;  /* default UDP port of the client               */
 const u_int32_t  DEFAULT_UDP_BUFFER    = 20000000;     /* default size of the UDP receive buffer       */
@@ -132,6 +133,7 @@ void reset_client(ttp_parameter_t *parameter)
     parameter->lossless      = DEFAULT_LOSSLESS;
     parameter->losswindow_ms = DEFAULT_LOSSWINDOW_MS;
     parameter->blockdump     = DEFAULT_BLOCKDUMP;
+    parameter->client_ip     = DEFAULT_CLIENT_IP;
 
     /* make sure the strdup() worked */
     if (parameter->server_name == NULL)
