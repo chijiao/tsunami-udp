@@ -104,6 +104,7 @@ typedef struct {
     const char         *client;         /* the alternate client IP to stream to       */
     const u_char       *finishhook;     /* program to run after successful copy       */
     const u_char       *allhook;        /* program to run to get listing of files for "get *" */
+    const char         *client_ip;         /* the alternate client IP to stream to       */
     u_int32_t           block_size;     /* the size of each block (in bytes)          */
     u_int64_t           file_size;      /* the total file size (in bytes)             */
     u_int32_t           block_count;    /* the total number of blocks in the file     */
