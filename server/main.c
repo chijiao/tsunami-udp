@@ -219,7 +219,8 @@ void client_handler(ttp_session_t *session)
         fprintf(stderr,"Client authenticated. Negotiated parameters are:\n");
         fprintf(stderr,"Block size: %d\n", param->block_size);
         fprintf(stderr,"Buffer size: %d\n", param->udp_buffer); 
-        fprintf(stderr,"Port: %d\n", param->tcp_port);    
+        fprintf(stderr,"Port: %d\n", param->tcp_port);  
+        fprintf(stderr,"Client ip: %s\n", param->client_ip);   
     }
 
     /* while we haven't been told to stop */

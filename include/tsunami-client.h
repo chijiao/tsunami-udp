@@ -79,6 +79,7 @@ extern const u_int32_t  DEFAULT_BLOCK_SIZE;     /* default size of a single file
 extern const int        DEFAULT_TABLE_SIZE;     /* initial size of the retransmission table     */
 extern const char      *DEFAULT_SERVER_NAME;    /* default name of the remote server            */
 extern const u_int16_t  DEFAULT_SERVER_PORT;    /* default TCP port of the remote server        */
+extern const char      *DEFAULT_CLIENT_IP;    /* default name of the client ip           */
 extern const u_int16_t  DEFAULT_CLIENT_PORT;    /* default UDP port of the client               */
 extern const u_int16_t  DEFAULT_UDP_PORT;       /* default UDP port of the client               */
 extern const u_int32_t  DEFAULT_UDP_BUFFER;     /* default size of the UDP receive buffer       */
@@ -169,6 +170,7 @@ typedef struct {
 /* Tsunami transfer protocol parameters */
 typedef struct {
     char               *server_name;              /* the name of the host running tsunamid       */
+    char               *client_ip;              /* the ip address of client       */
     u_int16_t           server_port;              /* the TCP port on which the server listens    */
     u_int16_t           client_port;              /* the UDP port on which the client receives   */
     u_int32_t           udp_buffer;               /* the size of the UDP receive buffer in bytes */
